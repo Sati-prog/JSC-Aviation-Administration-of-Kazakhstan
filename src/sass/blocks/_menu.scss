@@ -1,0 +1,54 @@
+.menu {
+
+    padding: 38px 230px 38px 0;
+    margin: 0 auto;
+
+    nav {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 357px;
+
+        margin: 0 auto;
+        margin-left: 0;
+        width: 916px;
+    }
+
+    &__list {
+
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        gap: 40px;
+        width: 373px;
+        top: 12px;
+    }
+
+    &__link {
+
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $text-color;
+        text-decoration: none;
+        cursor: pointer;
+
+        a {
+            
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+
+    &__logo {
+
+        img {
+            height: 49px;
+            width: 186px;
+        }
+    }
+}

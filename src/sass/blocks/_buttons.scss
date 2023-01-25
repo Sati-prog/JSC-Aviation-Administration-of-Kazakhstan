@@ -1,0 +1,28 @@
+.btn a {
+
+    border: 1px solid $second-color;
+    padding: 25px 27px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    color: $second-color;
+    cursor: pointer;
+    
+    img {
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn_blue a {
+
+    background: $main-color;
+    border: 1px solid $main-color;
+    text-decoration: none;
+}
