@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: repeat(3, 467px);
         column-gap: 32px;
-        padding-top: 90px;
+        margin-top: 30px;
 
         &_link {
             
@@ -22,12 +22,11 @@
 
             span {
 
-                font-family: 'Montserrat';
                 font-weight: 500;
                 font-size: 32px;
                 line-height: 39px;
-                padding-top: 122px;
-                padding-left: 40px;
+                top: 122px;
+                left: 40px;
     
                 color: $second-color;
                 position: absolute;
@@ -50,11 +49,10 @@
         column-gap: 50px;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 30px;
 
         a {
 
-            font-family: 'Montserrat';
             font-weight: 500;
             font-size: 18px;
             line-height: 23px;
@@ -69,10 +67,23 @@
                 height: 29px;
             }
         }
+
+        a:hover {
+            
+            opacity: 0.9;
+            transform: scale(0.98);
+        }
     }
 
-    iframe {
+    .map {
 
-        margin: 100px 0;
+        height: 784px;
+        margin-top: 100px;
+
+        #map {
+
+            width: 1462px; 
+            height: 684px;
+        }
     }
 }

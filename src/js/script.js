@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    let btn = document.getElementsByClassName("program__accordion_btn");
+    let btn = document.getElementsByClassName("accordion__btn");
     let i;
 
     for (i = 0; i < btn.length; i++) {

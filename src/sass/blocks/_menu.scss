@@ -24,12 +24,11 @@
         list-style-type: none;
         gap: 40px;
         width: 373px;
-        top: 12px;
+        top: 3px;
     }
 
     &__link {
 
-        font-family: 'Montserrat';
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
@@ -44,11 +43,23 @@
         }
     }
 
+    &__link:hover {
+        
+        opacity: 0.9;
+        transform: scale(0.98);
+    }
+
     &__logo {
 
         img {
             height: 49px;
             width: 186px;
         }
+    }
+
+    &__logo:hover {
+
+        opacity: 0.9;
+        transform: scale(0.98);
     }
 }

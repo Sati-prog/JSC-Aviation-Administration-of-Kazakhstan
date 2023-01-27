@@ -2,7 +2,6 @@
 
     border: 1px solid $second-color;
     padding: 25px 27px;
-    font-family: 'Montserrat';
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
@@ -25,4 +24,10 @@
     background: $main-color;
     border: 1px solid $main-color;
     text-decoration: none;
+}
+
+.btn:hover {
+    
+    opacity: 0.9;
+    transform: scale(0.98);
 }
