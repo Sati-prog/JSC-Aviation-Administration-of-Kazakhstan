@@ -2,24 +2,45 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    let btn = document.getElementsByClassName("accordion__btn");
+    // hamburger
+    const menu = document.querySelector('.menu__list'),
+          menuItem = document.querySelectorAll('.menu__link'),
+          hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu__list_active');
+    });
+
+    menuItem.forEach(item => {
+
+        item.addEventListener('click', () => {
+
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('menu__list_active');
+        });
+    });
+
+    // accordion
+    const title = document.getElementsByClassName('accordion__title');
     let i;
 
-    for (i = 0; i < btn.length; i++) {
+    for (i = 0; i < title.length; i++) {
 
-        btn[i].addEventListener("click", function() {
+        title[i].addEventListener('click', function() {
             
-            this.classList.toggle("active");
+            this.classList.toggle('active');
 
-            let panel = this.nextElementSibling;
+            const text = this.nextElementSibling;
 
-            if (panel.style.display === "block") {
+            if (text.style.display === 'block') {
             
-                panel.style.display = "none";
+                text.style.display = 'none';
 
             } else {
             
-                panel.style.display = "block";
+                text.style.display = 'block';
             }
         });
     }

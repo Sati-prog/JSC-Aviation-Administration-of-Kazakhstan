@@ -1,7 +1,7 @@
 @import 'libs/bootstrap-reboot.min';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @import 'base/variables';
+@import 'base/fonts';
 
 * {
 
@@ -33,6 +33,5 @@ h1, h2, ul, p {
 @import 'blocks/promo';
 @import 'blocks/about';
 @import 'blocks/speakers';
-@import 'blocks/_info';
+@import 'blocks/info';
 @import 'blocks/media';
-

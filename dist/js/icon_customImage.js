@@ -2,87 +2,53 @@ ymaps.ready(function () {
 
     var myMap = new ymaps.Map('map', {
 
-            center: [42.836802, 69.275497],
-            zoom: 9
-        }, {
+        center: [42.90, 68.81],
+        zoom: 9,
+        controls: [],
+        behaviors: ['drag']
+        // controls: ['zoomControl']
+    });
+        
+    var placeMarkSym =  new ymaps.Placemark([42.33, 69.58], {
 
-            searchControlProvider: 'yandex#search'
-        }),
+        hintContent: '«Shymkent International Airport» LLP',
+        balloonContent: '«Shymkent International Airport» LLP'
+    }, {
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        iconLayout: 'default#image',
+        iconImageHref: 'icons/map/airplane.png',
+        iconImageSize: [25, 25],
+        iconImageOffset: [-13, 0]
+    });
 
-            `<div style="color: #FFFFFF; font-weight: bold;">
-                $[properties.iconContent]
-            </div>`
-        ),
+    var placeMarkTurk =  new ymaps.Placemark([43.31, 68.26], {
 
-        myPlacemarkWithArrow = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: '«Turkistan International Airport» LLP',
+        balloonContent: '«Turkistan International Airport» LLP'
+    }, {
 
-            hintContent: '',
-            balloonContent: ''
-        }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'icons/map/airplane.png',
+        iconImageSize: [25, 25],
+        iconImageOffset: [-13, 0]
+    });
 
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'icons/map/way.png',
-            // Размеры метки.
-            iconImageSize: [452, 511],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-350, -240]
-        }),
+    var placeMarkWay =  new ymaps.Placemark([42.86, 69.24], {
 
-        myPlacemarkWithContent = new ymaps.Placemark([42.315514, 69.586916], {
+        hintContent: '',
+        balloonContent: ''
+    }, {
 
-            hintContent: '«Shymkent International Airport» LLP',
-            balloonContent: '«Shymkent International Airport» LLP',
-            iconContent: ''
-        }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'icons/map/way.png',
+        iconImageSize: [352, 461],
+        iconImageOffset: [-350, -220]
+    });
 
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'icons/map/airplane.png',
-            // Размеры метки.
-            iconImageSize: [30, 30],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-35, -10],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [0, 0],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        }),
-
-        myPlacemark = new ymaps.Placemark([43.312932, 68.266014], {
-
-            hintContent: '«Turkistan International Airport» LLP',
-            balloonContent: '«Turkistan International Airport» LLP',
-            iconContent: ''
-        }, {
-
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'icons/map/airplane.png',
-            // Размеры метки.
-            iconImageSize: [30, 30],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [3, -5],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [0, 0],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
+    // https://ru.stackoverflow.com/questions/1385668/%d0%9b%d0%b8%d0%bd%d0%b8%d1%8f-%d0%bf%d0%be%d0%bb%d1%83%d0%ba%d1%80%d1%83%d0%b3-%d0%bd%d0%b0-%d1%8f%d0%bd%d0%b4%d0%b5%d0%ba%d1%81-%d0%ba%d0%b0%d1%80%d1%82%d0%b0%d1%85
 
     myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent)
-        .add(myPlacemarkWithArrow);
+        .add(placeMarkSym)
+        .add(placeMarkTurk)
+        .add(placeMarkWay);
 });

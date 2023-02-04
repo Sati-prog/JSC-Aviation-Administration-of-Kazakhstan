@@ -4,7 +4,7 @@
 
         display: grid;
         grid-template-columns: repeat(2, 715px);
-        column-gap: 30px;
+        gap: 30px;
         margin-bottom: 100px;
 
         &_square {
@@ -18,29 +18,67 @@
     &__text {
 
         display: grid;
-        grid-template-rows: auto;
+        grid-template-rows: repeat(2, 1fr);
         row-gap: 10px;
-        align-content: center;
-        justify-content: space-evenly;
         width: 336px;
 
         &-sub {
 
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
             font-weight: 600;
             font-size: 32px;
-            line-height: 45px;
+            line-height: 130%;
     
             color: $text-color;
         }
 
         &__descr {
 
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
             font-weight: 400;
             font-size: 16px;
-            line-height: 30px;
+            line-height: 130%;
     
             color: $text-color;
         }
+    }
+
+    &__organized {
+
+        display: flex;
+        align-items: center;
+        background: url('../img/bg/organized.png') center (center/cover) no-repeat;
+        width: 1460px;
+        height: 192px;
+        margin-bottom: 100px;
+
+        a {
+
+            display: flex;
+            width: 466px;
+            height: 123px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            
+            img {
+
+                width: 100%;
+            } 
+        }
+    }
+
+    &__logos {
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 39px;
+        align-items: center;
+        margin-bottom: 100px;
     }
 
     &__title {
@@ -51,40 +89,17 @@
 
             font-weight: 800;
             font-size: 48px;
-            line-height: 59px;
+            line-height: 130%;
 
             color: $main-color;
         }
-    }
-
-    &__organized {
-
-        background: url('../img/bg/organized.png') center (center/cover) no-repeat;
-        width: 1460px;
-        height: 192px;
-        margin-bottom: 100px;
-
-        img {
-
-            display: flex;
-            margin: 0 auto;
-            padding-top: 34px;
-        }
-    }
-
-    &__logos {
-
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: 39px;
-        margin-bottom: 100px;
     }
 
     &__stay {
 
         display: grid;
         grid-template-columns: repeat(3, 467px);
-        column-gap: 29px;
+        gap: 29px;
     }
 
     .stay {
@@ -93,11 +108,26 @@
         grid-template-rows: 373px 117px 29px;
         row-gap: 30px;
 
+        &__photo {
+
+            transition: all .6s;
+
+            img {
+
+                object-fit: cover;
+            }
+
+            &:hover {
+
+                transform: scale(0.95);
+            }
+        }
+
         &__title {
 
             font-weight: 600;
             font-size: 32px;
-            line-height: 39px;
+            line-height: 130%;
               
             color: $text-color;
         }
@@ -106,17 +136,17 @@
     
             font-weight: 400;
             font-size: 24px;
-            line-height: 29px;
+            line-height: 130%;
             margin-top: 10px;
     
             color: $text-color;
         }
-    
+
         &__link {
 
             font-weight: 400;
             font-size: 24px;
-            line-height: 29px;
+            line-height: 130%;
             text-decoration: none;
             cursor: pointer;
             color: $main-color;
@@ -139,55 +169,80 @@
 
     margin-bottom: 100px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     row-gap: 10px;
 
-    &__btn {
+    &__title {
 
         width: 1460px;
         height: 121px;
         border: none;
-        outline: none;
-        transition: 0.1s;
         padding: 40px;
         cursor: pointer;
 
-        display: grid;
-        grid-template-columns: 250px 24px;
-        column-gap: 1000px;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-
-        span {
-
-            font-weight: 500;
-            font-size: 32px;
-            line-height: 45px;
-            color: $second-color;
-        }
-
-        img {
-
-            width: 24px;
-            height: 24px;
-        }
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        color: $second-color;
+        position: relative;
     }
 
-    &__panel {
+    &__title:focus {
+        outline: none;
+    }
+
+    &__title:before,
+    &__title:after {
+
+        content: '';
+        width: 15px;
+        height: 2px;
+        background-color: $second-color;
+        position: absolute;
+        top: 60px;
+        transition: all 0.3s ease 0s;
+    }
+
+    &__title:before {
+
+        transform: rotate(40deg);
+        left: 1394px;
+    }
+
+    &__title:after {
+
+        transform: rotate(-40deg);
+        right: 40px;
+    }
+
+    &__title.active:before {
+
+        transform: rotate(-40deg);
+    }
+
+    &__title.active:after {
+
+        transform: rotate(40deg);
+    }
+
+    &__text {
 
         padding: 30px;
         background-color: $second-color;
         display: none;
         overflow: hidden;
+        border: none;
         
         font-weight: 400;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 130%;
+        transition: 0.9s ease;
         
         color: $text-color;
     }
 }
+
+
 
 .first {
 

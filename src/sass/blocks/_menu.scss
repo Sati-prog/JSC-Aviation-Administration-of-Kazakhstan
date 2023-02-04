@@ -1,22 +1,30 @@
 .menu {
 
-    padding: 38px 230px 38px 0;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 357px;
+    width: 916px;
+    padding: 38px 0;
 
-    nav {
+    &__logo {
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 357px;
+        cursor: pointer;
+    
+        img {
 
-        margin: 0 auto;
-        margin-left: 0;
-        width: 916px;
+            height: 49px;
+            width: 186px;
+        }
     }
-
+    
+    &__logo:hover {
+    
+        transform: scale(0.95);
+    }
+    
     &__list {
-
+    
         display: flex;
         position: relative;
         justify-content: center;
@@ -28,38 +36,24 @@
     }
 
     &__link {
-
+    
         font-weight: 500;
         font-size: 14px;
-        line-height: 17px;
+        line-height: 130%;
         color: $text-color;
         text-decoration: none;
         cursor: pointer;
-
-        a {
             
+        a {
+                        
             text-decoration: none;
             color: $text-color;
         }
     }
-
+            
     &__link:hover {
-        
+                    
         opacity: 0.9;
-        transform: scale(0.98);
-    }
-
-    &__logo {
-
-        img {
-            height: 49px;
-            width: 186px;
-        }
-    }
-
-    &__logo:hover {
-
-        opacity: 0.9;
-        transform: scale(0.98);
+        transform: scale(0.95);
     }
 }

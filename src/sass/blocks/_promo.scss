@@ -1,28 +1,35 @@
 .promo {
 
-    height: 853px;
-    background: url('../img/bg/bg.png') center (center/cover) no-repeat;
+    max-height: 853px;
+    background: url('../img/bg/bg.png') center center no-repeat;
+    padding: 158px 0 100px 0;
 
     &__wrapper {
 
         display: grid;
         grid-template-columns: 741px 464px;
-        column-gap: 247px;
-        height: 585px;
-        margin-top: 68px;
-        position: relative;
+        column-gap: 255px;
+    }
+
+    &__content {
+
+        display: grid;
+        grid-template-rows: 438px 74px;
+        row-gap: 83px;
+        align-content: space-between;
     }
 
     &__text {
 
         display: grid;
-        grid-template-rows: 428px 75px;
-        row-gap: 83px;
-        align-content: space-between;
+        grid-template-rows: 281px 98px;
+        row-gap: 49px;
+        justify-content: space-between;
     }
 
     &__title_w {
 
+        line-height: 140%;
         color: $second-color;
 
         img {
@@ -36,26 +43,43 @@
 
     &__subtitle_w {
 
-        margin-top: 49px;
         color: $second-color;
+        line-height: 110%;
+        z-index: 1;
+
+        .divider {
+
+            width: 290px;
+            height: 11px;
+            background: #FDC50C;
+            position: relative;
+            top: -12px;
+            z-index: -1;
+        }
+
+        .divider_2 {
+
+            width: 320px;
+            height: 11px;
+            background: #FDC50C;
+            position: relative;
+            top: -12px;
+            z-index: -1;
+        }
     }
 
     &__btns {
 
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
         gap: 25px;
         list-style-type: none;
-
-        width: 741px;
-        height: 74px;
     }
 
     &__logo {
 
         display: grid;
-        grid-template-rows: 183px 402px;
+        grid-template-rows: 183px 412px;
         align-items: flex-start;
 
         &_img {

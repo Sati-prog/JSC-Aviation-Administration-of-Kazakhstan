@@ -2,12 +2,15 @@
 
     height: 1329px;
     margin: 0 auto;
-    background: 
-        url('../img/bg/about-bg.png') no-repeat,
-        url('../img/bg/rectangle-bg.jpg') no-repeat;
-    background-size: 100% 1329px, 1680px 713px;
-    background-position: center, center 483px;
-    opacity: 1;
+    background: url('../img/bg/about-bg.png') center center no-repeat fixed;
+
+    &__bg {
+
+        background: url('../img/bg/rectangle-bg.jpg') no-repeat center center;
+        background-position: center;
+        // margin: 0 auto;
+        min-height: 713px;
+    }
     
     &__title {
 
@@ -17,15 +20,15 @@
     &__title_w {
 
         color: $second-color;
-        margin-bottom: 30px;
+        padding: 100px 0 30px 0;
     }
 
     &__descr {
 
         font-weight: 400;
         font-size: 32px;
-        line-height: 45px;
-        margin-bottom: 150px;
+        line-height: 130%;
+        margin-bottom: 100px;
 
         color: $text-color;
     }
@@ -34,31 +37,32 @@
 
         font-weight: 400;
         font-size: 32px;
-        line-height: 45px;
+        line-height: 130%;
 
         color: $second-color;
-        margin-bottom: 63px;
+        padding-bottom: 63px;
     }
 
     &__wrapper {
 
         display: grid;
         grid-template-columns: repeat(5, 280px);
-        column-gap: 15px;
-
-        .circles {
-
-            display: grid;
-            grid-template-rows: 185px 70px;
-            row-gap: 30px;
-        }
+        gap: 15px;
+        padding-bottom: 70px;
+        box-sizing: border-box;
     }
 
     &__item {
 
+        display: grid;
+        grid-template-rows: 185px 70px;
+        gap: 30px;
+
         &_icon img {
 
             display: flex;
+            width: 185px;
+            height: 185px;
             margin: 0 auto;
         }
 
@@ -66,9 +70,10 @@
 
             font-weight: 400;
             font-size: 20px;
-            line-height: 35px;
+            line-height: 150%;
 
             text-align: center;
+            justify-content: center;
 
             color: $second-color;
         }
