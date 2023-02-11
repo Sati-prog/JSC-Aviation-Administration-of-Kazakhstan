@@ -1,9 +1,10 @@
 .info {
 
-    background: url('../img/bg/info-bg.png') no-repeat center center fixed;
-    background-size: 100% 1554px;
+    background: url('../img/bg/info-bg.png') 100% 100% no-repeat fixed;
+    background-size: cover;
     max-height: 1329px;
     padding-top: 100px;
+    padding-bottom: 0;
 
     &__content {
 
@@ -98,5 +99,20 @@
             width: 1462px; 
             height: 684px;
         }
+
+        // #map > 
+        // ymaps > 
+        // ymaps.ymaps-2-1-79-inner-panes > 
+        // ymaps.ymaps-2-1-79-places-pane > 
+        // ymaps.ymaps-2-1-79-placemark-overlay > 
+        // ymaps > 
+        // ymaps.ymaps-2-1-79-image {
+
+        //     animation-name: tada;
+        //     animation-iteration-count: infinite;
+        //     animation-duration: 2s;
+        //     animation-fill-mode: both;
+        //     animation-timing-function: ease-in-out;
+        // }
     }
 }

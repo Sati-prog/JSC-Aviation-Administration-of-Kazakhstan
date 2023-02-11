@@ -29,19 +29,19 @@ window.addEventListener('DOMContentLoaded', () => {
     for (i = 0; i < title.length; i++) {
 
         title[i].addEventListener('click', function() {
-            
+
             this.classList.toggle('active');
 
             const text = this.nextElementSibling;
 
-            if (text.style.display === 'block') {
-            
-                text.style.display = 'none';
+            if (text.style.maxHeight) {
+                
+                text.style.maxHeight = null;
 
             } else {
-            
-                text.style.display = 'block';
+                
+                text.style.maxHeight = text.scrollHeight + 'px';
             }
-        });
-    }
+        }
+    )};
 });

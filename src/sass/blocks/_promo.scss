@@ -1,20 +1,28 @@
 .promo {
 
-    max-height: 853px;
-    background: url('../img/bg/bg.png') center center no-repeat;
+    min-height: 853px;
+    background:
+        url('../img/bg/blackout.png'),
+        url('../img/bg/1.png'),
+        url('../img/bg/2.png'),
+        url('../img/bg/bg.png');
+    background-repeat: no-repeat;
+    background-position: center center, right top, right top, center center; 
+    background-size: cover;
     padding: 158px 0 100px 0;
 
     &__wrapper {
 
         display: grid;
         grid-template-columns: 741px 464px;
+        grid-template-rows: minmax(510px, auto);
         column-gap: 255px;
     }
 
     &__content {
 
         display: grid;
-        grid-template-rows: 438px 74px;
+        grid-template-rows: minmax(438px, auto) minmax(74px, auto);
         row-gap: 83px;
         align-content: space-between;
     }
@@ -22,7 +30,7 @@
     &__text {
 
         display: grid;
-        grid-template-rows: 281px 98px;
+        grid-template-rows: minmax(281px, auto) minmax(98px, auto);
         row-gap: 49px;
         justify-content: space-between;
     }
@@ -79,7 +87,7 @@
     &__logo {
 
         display: grid;
-        grid-template-rows: 183px 412px;
+        grid-template-rows: 183px minmax(412px, auto);
         align-items: flex-start;
 
         &_img {
@@ -94,6 +102,7 @@
                 display: flex;
                 align-items: flex-start;
                 margin: 0 auto;
+                object-fit: cover;
             }
         }
 
