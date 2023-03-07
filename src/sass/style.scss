@@ -8,12 +8,14 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .container {
 
-    width: 1460px;
+    width: 1500px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 section {
@@ -26,12 +28,16 @@ h1, h2, ul, p {
     margin-bottom: 0;
 }
 
-
 @import 'blocks/buttons';
 @import 'blocks/title';
+
 @import 'blocks/menu';
 @import 'blocks/promo';
 @import 'blocks/about';
 @import 'blocks/speakers';
 @import 'blocks/info';
-@import 'blocks/media';
+@import 'blocks/pageup';
+
+@import 'media/desktop';
+@import 'media/tablet';
+@import 'media/mobile';

@@ -44,4 +44,18 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     )};
+
+    // smooth scroll and pageup
+    let upBtn = document.querySelector('.pageup');
+
+    upBtn.onclick = () => window.scrollTo({
+        
+        top: 0, 
+        behavior: 'smooth' 
+    });
+
+    window.onscroll = () => window.scrollY > 2000 
+                                                ? upBtn.style.opacity = 1 
+                                                : upBtn.style.opacity = 0;
+
 });
